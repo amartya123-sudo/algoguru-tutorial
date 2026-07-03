@@ -1,5 +1,6 @@
-```
-# Compiled and build artifacts
+```gitignore
+# Python cache
+*/__pycache__/*
 *.pyc
 __pycache__/
 *.o
