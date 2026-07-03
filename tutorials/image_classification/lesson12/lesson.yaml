@@ -1,0 +1,43 @@
+id: lesson12
+
+title: Capstone Project - Image Classification
+
+difficulty: Advanced
+
+estimated_time: 30
+
+objective: >
+  Build a complete image classification application using everything
+  learned throughout the course.
+
+concept: |
+  Congratulations!
+
+  In this capstone lesson, you'll combine all previous lessons into
+  one complete workflow.
+
+  The application should:
+
+  • Load the dataset
+  • Preprocess images
+  • Create a DataLoader
+  • Build a CNN
+  • Configure the loss function
+  • Train the model
+  • Evaluate the model
+  • Save the trained model
+  • Predict the class of a new image
+
+instructions:
+  - Complete the missing sections.
+  - Train for 2 epochs.
+  - Print the test accuracy.
+  - Predict the sample image.
+
+hint: >
+  Review previous lessons if you're stuck.
+
+success_message: >
+  Congratulations! You built your first complete computer vision project.
+
+next_lesson: null

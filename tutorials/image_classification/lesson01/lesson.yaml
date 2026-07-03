@@ -1,0 +1,33 @@
+id: lesson01
+
+title: Import Required Libraries
+
+difficulty: Beginner
+
+estimated_time: 3
+
+objective: >
+  Learn how to import the essential libraries used throughout the image
+  classification project.
+
+concept: |
+  Every deep learning project begins by importing the required packages.
+
+  • torch provides tensors and neural network functionality.
+
+  • torchvision contains datasets, pretrained models and image transforms.
+
+  • matplotlib is used for visualization.
+
+instructions:
+  - Import torch
+  - Import torchvision.transforms as transforms
+  - Import matplotlib.pyplot as plt
+
+hint: |
+  Use the import keyword.
+
+success_message: >
+  Excellent! You imported all required libraries.
+
+next_lesson: lesson02

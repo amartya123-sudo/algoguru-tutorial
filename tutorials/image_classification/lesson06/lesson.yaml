@@ -1,0 +1,39 @@
+id: lesson06
+
+title: Build Your First Convolutional Neural Network
+
+difficulty: Intermediate
+
+estimated_time: 15
+
+objective: >
+  Build a simple Convolutional Neural Network for image classification.
+
+concept: |
+  A CNN automatically learns features from images.
+
+  This network contains:
+
+  • Convolution layer
+  • ReLU activation
+  • Max Pooling
+  • Flatten
+  • Fully Connected layer
+
+  The forward() method describes how data flows through the network.
+
+instructions:
+  - Create a class named SimpleCNN.
+  - Inherit from nn.Module.
+  - Define conv1.
+  - Define pool.
+  - Define fc1.
+  - Implement forward().
+
+hint: >
+  Every PyTorch model inherits from nn.Module.
+
+success_message: >
+  Great! You built your first CNN.
+
+next_lesson: lesson07

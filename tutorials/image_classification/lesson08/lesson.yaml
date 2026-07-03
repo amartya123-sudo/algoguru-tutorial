@@ -1,0 +1,35 @@
+id: lesson08
+
+title: Train the Convolutional Neural Network
+
+difficulty: Intermediate
+
+estimated_time: 15
+
+objective: >
+  Complete the training loop by performing the forward pass,
+  computing the loss, and updating the model weights.
+
+concept: |
+  A typical PyTorch training loop follows these steps:
+
+  1. Load a batch of images and labels.
+  2. Clear previous gradients.
+  3. Perform a forward pass.
+  4. Compute the loss.
+  5. Backpropagate the gradients.
+  6. Update the model weights.
+
+instructions:
+  - Compute predictions.
+  - Calculate the loss.
+  - Call backward().
+  - Update the optimizer.
+
+hint: >
+  outputs = model(images)
+
+success_message: >
+  Excellent! Your model completed one training epoch.
+
+next_lesson: lesson09

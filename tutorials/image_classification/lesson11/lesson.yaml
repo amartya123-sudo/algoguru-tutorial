@@ -1,0 +1,33 @@
+id: lesson11
+
+title: Save and Load a Trained Model
+
+difficulty: Intermediate
+
+estimated_time: 10
+
+objective: >
+  Learn how to save a trained model and load it back for inference.
+
+concept: |
+  Training a deep learning model can take a long time.
+
+  Instead of training every time, we save the learned weights.
+
+  torch.save() stores the model parameters.
+
+  load_state_dict() loads them into a model.
+
+instructions:
+  - Save the model weights.
+  - Create a new model.
+  - Load the saved weights.
+  - Switch the model to evaluation mode.
+
+hint: >
+  Use torch.save() and load_state_dict().
+
+success_message: >
+  Excellent! Your model was saved and loaded successfully.
+
+next_lesson: lesson12

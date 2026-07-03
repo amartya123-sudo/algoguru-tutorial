@@ -1,0 +1,37 @@
+id: lesson07
+
+title: Configure the Loss Function and Optimizer
+
+difficulty: Intermediate
+
+estimated_time: 8
+
+objective: >
+  Configure the loss function and optimizer required to train the model.
+
+concept: |
+  Training a neural network requires two important components:
+
+  • Loss Function
+      Measures how wrong the model's predictions are.
+
+  • Optimizer
+      Updates the model's weights to reduce the loss.
+
+  For image classification, CrossEntropyLoss is commonly used.
+
+  Adam is a popular optimizer that adapts the learning rate during training.
+
+instructions:
+  - Create the model.
+  - Define CrossEntropyLoss.
+  - Create an Adam optimizer.
+  - Use learning_rate = 0.001.
+
+hint: >
+  optimizer = optim.Adam(model.parameters(), lr=0.001)
+
+success_message: >
+  Excellent! Training components are ready.
+
+next_lesson: lesson08

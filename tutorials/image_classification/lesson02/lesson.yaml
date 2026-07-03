@@ -1,0 +1,34 @@
+id: lesson02
+
+title: Load an Image Dataset
+
+difficulty: Beginner
+
+estimated_time: 5
+
+objective: >
+  Learn how to load an image dataset using torchvision.datasets.ImageFolder.
+
+concept: |
+  ImageFolder automatically reads images arranged in folders.
+
+  Example:
+
+      dataset/
+          cats/
+          dogs/
+
+  Folder names become class labels.
+
+instructions:
+  - Import ImageFolder.
+  - Create a dataset variable.
+  - Use the provided transform.
+
+hint: >
+  Use datasets.ImageFolder()
+
+success_message: >
+  Great! The dataset has been loaded successfully.
+
+next_lesson: lesson03

@@ -1,0 +1,35 @@
+id: lesson05
+
+title: Create DataLoaders
+
+difficulty: Beginner
+
+estimated_time: 8
+
+objective: >
+  Learn how to create DataLoaders for batching and shuffling image data.
+
+concept: |
+  A DataLoader loads images in small batches instead of loading the
+  entire dataset into memory at once.
+
+  Benefits:
+
+  • Faster training
+  • Automatic batching
+  • Optional shuffling
+  • Easy iteration
+
+instructions:
+  - Import DataLoader.
+  - Create a train_loader.
+  - Use batch_size=32.
+  - Enable shuffle=True.
+
+hint: >
+  DataLoader(dataset, batch_size=32, shuffle=True)
+
+success_message: >
+  Excellent! Your DataLoader is ready.
+
+next_lesson: lesson06

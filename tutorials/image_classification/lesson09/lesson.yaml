@@ -1,0 +1,37 @@
+id: lesson09
+
+title: Evaluate the Model
+
+difficulty: Intermediate
+
+estimated_time: 12
+
+objective: >
+  Evaluate the trained model by calculating its classification accuracy.
+
+concept: |
+  After training, we need to measure how well the model performs on
+  unseen data.
+
+  During evaluation:
+
+  • Switch the model to evaluation mode.
+  • Disable gradient computation.
+  • Predict class labels.
+  • Compare predictions with actual labels.
+  • Calculate the overall accuracy.
+
+instructions:
+  - Switch the model to evaluation mode.
+  - Disable gradient computation.
+  - Calculate predictions.
+  - Count correct predictions.
+  - Compute the accuracy percentage.
+
+hint: >
+  Use model.eval() and torch.no_grad().
+
+success_message: >
+  Excellent! You successfully evaluated the model.
+
+next_lesson: lesson10

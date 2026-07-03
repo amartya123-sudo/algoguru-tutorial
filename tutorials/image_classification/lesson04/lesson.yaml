@@ -1,0 +1,38 @@
+id: lesson04
+
+title: Image Preprocessing with Transforms
+
+difficulty: Beginner
+
+estimated_time: 8
+
+objective: >
+  Create an image preprocessing pipeline using torchvision transforms.
+
+concept: |
+  Neural networks cannot work directly with raw images.
+
+  We usually preprocess images before training.
+
+  Common preprocessing steps include:
+
+  • Resize images to a fixed size
+  • Convert images to tensors
+  • Normalize pixel values
+
+  torchvision.transforms.Compose lets us combine multiple transforms into a pipeline.
+
+instructions:
+  - Create a variable named transform.
+  - Use transforms.Compose().
+  - Add Resize((224, 224)).
+  - Add ToTensor().
+  - Add Normalize().
+
+hint: >
+  Use transforms.Compose([...])
+
+success_message: >
+  Excellent! Your preprocessing pipeline is ready.
+
+next_lesson: lesson05

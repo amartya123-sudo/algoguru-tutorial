@@ -1,0 +1,31 @@
+id: lesson03
+
+title: Explore the Dataset
+
+difficulty: Beginner
+
+estimated_time: 5
+
+objective: >
+  Learn how to inspect an ImageFolder dataset and understand its structure.
+
+concept: |
+  Before training a model, it is important to inspect the dataset.
+
+  ImageFolder provides useful attributes:
+
+  • classes
+  • class_to_idx
+  • samples
+
+instructions:
+  - Print the class names.
+  - Print the total number of images.
+
+hint: >
+  Use dataset.classes and len(dataset).
+
+success_message: >
+  Great! You successfully explored the dataset.
+
+next_lesson: lesson04

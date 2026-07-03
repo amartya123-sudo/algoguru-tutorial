@@ -1,0 +1,36 @@
+id: lesson10
+
+title: Predict a Single Image
+
+difficulty: Intermediate
+
+estimated_time: 12
+
+objective: >
+  Use the trained model to classify a single image.
+
+concept: |
+  During inference we predict one image at a time.
+
+  The steps are:
+
+  • Load the image.
+  • Apply the preprocessing pipeline.
+  • Add a batch dimension.
+  • Run the model.
+  • Select the predicted class.
+
+instructions:
+  - Load the image.
+  - Apply the transform.
+  - Add a batch dimension.
+  - Switch the model to evaluation mode.
+  - Predict the class.
+
+hint: >
+  image = transform(image).unsqueeze(0)
+
+success_message: >
+  Excellent! You predicted the image successfully.
+
+next_lesson: lesson11
