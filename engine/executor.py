@@ -25,6 +25,10 @@ class Executor:
 
     def run(self, scaffold: str, user_code: str):
 
+        # Handle case where user_code is None
+        if user_code is None:
+            user_code = ""
+
         start = time.time()
 
         # Inject the Monaco editor code into the scaffold

@@ -9,15 +9,18 @@ def render_editor(lesson):
         lesson.starter_code,
     )
 
-    code = monaco(
+    new_code = monaco(
         value=code,
         language="python",
         theme="vs-dark",
         height=500,
     )
 
-    st.session_state.editor_state[
-        lesson.id
-    ] = code
+    # Handle case where monaco returns None
+    if new_code is not None:
+        code = new_code
+        st.session_state.editor_state[
+            lesson.id
+        ] = code
 
     return code
