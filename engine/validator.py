@@ -12,14 +12,31 @@ class Validator:
 
         namespace = {}
 
-        exec(validator_code, namespace)
+        try:
+            exec(validator_code, namespace)
 
-        validate = namespace["validate"]
+            validate = namespace["validate"]
 
-        result = validate(user_globals)
+            message = validate(user_globals)
 
-        return ValidationResult(
-            success=result["success"],
-            message=result["message"],
-            errors=result["errors"],
-        )
+            return ValidationResult(
+                success=True,
+                message=message,
+                errors=[],
+            )
+
+        except AssertionError as e:
+
+            return ValidationResult(
+                success=False,
+                message="Validation failed.",
+                errors=[str(e)],
+            )
+
+        except Exception as e:
+
+            return ValidationResult(
+                success=False,
+                message="Validator error.",
+                errors=[str(e)],
+            )

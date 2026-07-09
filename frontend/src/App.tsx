@@ -1,8 +1,10 @@
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
-import { Streamlit, withStreamlitConnection } from "streamlit-component-lib";
-
-import type { ComponentProps } from "streamlit-component-lib";
+import {
+  Streamlit,
+  withStreamlitConnection,
+  type ComponentProps,
+} from "streamlit-component-lib";
 
 import MonacoEditor from "./MonacoEditor";
 
@@ -11,30 +13,26 @@ function App(props: ComponentProps) {
 
   const [code, setCode] = useState(args.value ?? "");
 
-  const pendingRequest = useRef(false);
+  const previousRequest = useRef(false);
 
   useEffect(() => {
     setCode(args.value ?? "");
   }, [args.value]);
 
-  // Python tells component: "send me current code now"
-  useEffect(() => {
-    if (args.request_code === true && pendingRequest.current === false) {
-      pendingRequest.current = true;
-
-      Streamlit.setComponentValue({
-        code,
-      });
-
-      setTimeout(() => {
-        pendingRequest.current = false;
-      }, 0);
-    }
-  }, [args.request_code]);
-
   useEffect(() => {
     Streamlit.setFrameHeight();
   });
+
+  useEffect(() => {
+    const request = args.request_code === true;
+
+    // Only respond when request_code changes from false -> true
+    if (request && !previousRequest.current) {
+      Streamlit.setComponentValue(code);
+    }
+
+    previousRequest.current = request;
+  }, [args.request_code, code]);
 
   return (
     <MonacoEditor

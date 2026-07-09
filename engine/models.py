@@ -33,4 +33,3 @@ class ValidationResult:
     success: bool
     errors: List[str]
     hints: List[str]
-    score: float
