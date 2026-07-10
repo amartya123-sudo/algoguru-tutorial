@@ -8,15 +8,22 @@ import {
 
 import MonacoEditor from "./MonacoEditor";
 
+const SYNC_DEBOUNCE_MS = 250;
+
 function App(props: ComponentProps) {
   const args = props.args;
 
   const [code, setCode] = useState(args.value ?? "");
 
-  const previousRequest = useRef(false);
+  const lastSent = useRef(args.value ?? "");
+
+  const debounceTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   useEffect(() => {
-    setCode(args.value ?? "");
+    if (args.value !== lastSent.current) {
+      setCode(args.value ?? "");
+      lastSent.current = args.value ?? "";
+    }
   }, [args.value]);
 
   useEffect(() => {
@@ -24,15 +31,12 @@ function App(props: ComponentProps) {
   });
 
   useEffect(() => {
-    const request = args.request_code === true;
-
-    // Only respond when request_code changes from false -> true
-    if (request && !previousRequest.current) {
-      Streamlit.setComponentValue(code);
-    }
-
-    previousRequest.current = request;
-  }, [args.request_code, code]);
+    return () => {
+      if (debounceTimer.current) {
+        clearTimeout(debounceTimer.current);
+      }
+    };
+  }, []);
 
   return (
     <MonacoEditor
@@ -41,7 +45,17 @@ function App(props: ComponentProps) {
       theme={args.theme ?? "vs-dark"}
       height={args.height ?? 500}
       onChange={(value) => {
-        setCode(value ?? "");
+        const next = value ?? "";
+        setCode(next);
+
+        if (debounceTimer.current) {
+          clearTimeout(debounceTimer.current);
+        }
+
+        debounceTimer.current = setTimeout(() => {
+          lastSent.current = next;
+          Streamlit.setComponentValue(next);
+        }, SYNC_DEBOUNCE_MS);
       }}
     />
   );

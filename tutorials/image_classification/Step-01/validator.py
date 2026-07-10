@@ -1,5 +1,5 @@
 def validate(namespace):
-
+    
     errors = []
 
     if "torch" not in namespace:
