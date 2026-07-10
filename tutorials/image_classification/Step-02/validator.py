@@ -19,7 +19,6 @@ def validate(namespace):
     allowed = (
         MNIST,
         FashionMNIST,
-        CIFAR10,
         KMNIST,
     )
 

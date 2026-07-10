@@ -1,4 +1,4 @@
-from torchvision.datasets import CIFAR10
+from torchvision.datasets import MNIST
 
 # Create the dataset
 
