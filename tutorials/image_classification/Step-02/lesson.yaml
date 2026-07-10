@@ -11,19 +11,19 @@ objective: >
 
 concept: |
   torchvision.datasets provides ready-made datasets like MNIST, FashionMNIST,
-  CIFAR10, and KMNIST that download and load automatically.
+  and KMNIST that download and load automatically.
 
   Example:
 
-      dataset = datasets.CIFAR10(root="data", train=True, download=True, transform=transform)
+      dataset = datasets.MNIST(root="data", train=True, download=True, transform=transform)
 
 instructions:
-  - Import one of MNIST, FashionMNIST, CIFAR10, or KMNIST from torchvision.datasets.
+  - Import one of MNIST, FashionMNIST, or KMNIST from torchvision.datasets.
   - Create a variable named 'dataset' using that class.
   - Use the provided transform.
 
 hint: >
-  Use datasets.CIFAR10(), datasets.MNIST(), datasets.FashionMNIST(), or datasets.KMNIST()
+  Use datasets.MNIST(), datasets.FashionMNIST(), or datasets.KMNIST()
 
 success_message: >
   Great! The dataset has been loaded successfully.

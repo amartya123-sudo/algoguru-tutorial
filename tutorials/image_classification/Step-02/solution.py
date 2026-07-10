@@ -5,13 +5,6 @@ transform = transforms.ToTensor()
 
 # Choose ONE dataset by uncommenting it.
 
-# dataset = datasets.CIFAR10(
-#     root="data",
-#     train=True,
-#     download=True,
-#     transform=transform,
-# )
-
 dataset = datasets.MNIST(
     root="data",
     train=True,
