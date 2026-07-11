@@ -7,26 +7,23 @@ difficulty: Beginner
 estimated_time: 5
 
 objective: >
-  Learn how to load an image dataset using torchvision.datasets.ImageFolder.
+  Learn how to load a built-in image dataset using torchvision.datasets.
 
 concept: |
-  ImageFolder automatically reads images arranged in folders.
+  torchvision.datasets provides ready-made datasets like MNIST, FashionMNIST,
+  and KMNIST that download and load automatically.
 
   Example:
 
-      dataset/
-          cats/
-          dogs/
-
-  Folder names become class labels.
+      dataset = datasets.MNIST(root="data", train=True, download=True, transform=transform)
 
 instructions:
-  - Import ImageFolder.
-  - Create a dataset variable.
+  - Import one of MNIST, FashionMNIST, or KMNIST from torchvision.datasets.
+  - Create a variable named 'dataset' using that class.
   - Use the provided transform.
 
 hint: >
-  Use datasets.ImageFolder()
+  Use datasets.MNIST(), datasets.FashionMNIST(), or datasets.KMNIST()
 
 success_message: >
   Great! The dataset has been loaded successfully.

@@ -1,5 +1,5 @@
-from torchvision.datasets import CIFAR10
+from torchvision.datasets import MNIST
 
 # Create the dataset
 
-# dataset = (can choose from MNIST, FashionMNIST, CIFAR10, KMNIST)
+# dataset = (can choose from MNIST, FashionMNIST, KMNIST)
