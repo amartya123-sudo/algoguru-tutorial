@@ -1,0 +1,9 @@
+pydantic
+python-multipart
+PyYAML
+torch
+torchvision
+matplotlib
+streamlit
+fastapi
+uvicorn
