@@ -1,0 +1,39 @@
+from fastapi import FastAPI
+
+from app.api.execute import router as execute_router
+from app.api.projects import router as projects_router
+from app.api.progress import router as progress_router
+
+
+app = FastAPI(
+    title="AlgoGuru API",
+    version="1.0.0",
+)
+
+
+app.include_router(
+    projects_router,
+    prefix="/projects",
+    tags=["Projects"],
+)
+
+app.include_router(
+    execute_router,
+    prefix="/execute",
+    tags=["Execution"],
+)
+
+app.include_router(
+    progress_router,
+    prefix="/progress",
+    tags=["Progress"],
+)
+
+
+@app.get("/")
+def root():
+    return {
+        "name": "AlgoGuru API",
+        "status": "running",
+        "version": "1.0.0",
+    }
