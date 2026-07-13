@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-
+from fastapi.middleware.cors import CORSMiddleware
 from app.api.execute import router as execute_router
 from app.api.projects import router as projects_router
 from app.api.progress import router as progress_router
@@ -8,6 +8,14 @@ from app.api.progress import router as progress_router
 app = FastAPI(
     title="AlgoGuru API",
     version="1.0.0",
+)
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
 )
 
 
