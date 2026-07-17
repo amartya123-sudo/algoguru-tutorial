@@ -2,7 +2,7 @@ from redis import Redis
 from rq import Worker, Queue
 
 redis = Redis(
-    host="localhost",
+    host="redis",
     port=6379,
 )
 
