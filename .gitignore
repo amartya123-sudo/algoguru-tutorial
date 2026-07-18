@@ -10,7 +10,7 @@ yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
-image_classification.md
+RAG.md
 
 node_modules
 dist
