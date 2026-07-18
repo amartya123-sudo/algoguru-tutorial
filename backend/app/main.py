@@ -3,6 +3,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from app.api.execute import router as execute_router
 from app.api.projects import router as projects_router
 from app.api.progress import router as progress_router
+from app.api.jobs import router as jobs_router
 
 
 app = FastAPI(
@@ -17,7 +18,6 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
-
 
 app.include_router(
     projects_router,
@@ -37,6 +37,11 @@ app.include_router(
     tags=["Progress"],
 )
 
+app.include_router(
+    jobs_router,
+    prefix="/jobs",
+    tags=["Jobs"],
+)
 
 @app.get("/")
 def root():
