@@ -8,3 +8,14 @@ torchvision
 matplotlib
 redis
 rq
+llama-index
+llama-index-llms-ollama
+llama-index-embeddings-huggingface
+langchain
+langchain-core
+langchain-ollama
+sentence-transformers
+transformers
+torch
+scikit-learn
+pypdf

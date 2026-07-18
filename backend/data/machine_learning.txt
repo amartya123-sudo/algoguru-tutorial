@@ -1,0 +1,6 @@
+Machine learning is a branch of artificial intelligence.
+Machine learning algorithms learn patterns from data.
+There are three main categories of machine learning:
+Supervised Learning
+Unsupervised Learning
+Reinforcement Learning

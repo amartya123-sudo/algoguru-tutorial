@@ -1,0 +1,3 @@
+Transformers are neural network architectures introduced in the paper "Attention Is All You Need."
+Transformers rely on the self-attention mechanism.
+Large Language Models such as Llama, GPT, and Gemma are built using transformer architectures.

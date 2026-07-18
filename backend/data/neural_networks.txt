@@ -1,0 +1,6 @@
+A neural network consists of interconnected neurons organized into layers.
+A typical neural network contains:
+Input Layer
+Hidden Layers
+Output Layer
+Training is performed using backpropagation and gradient descent.
